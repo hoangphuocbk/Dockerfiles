@@ -3,11 +3,11 @@ MAINTAINER phuochoang
 
 # Install necessary packages
 RUN apt-get update -y
-RUN apt-get install -u python-pip python-dev build-essential
+RUN apt-get install -y python-pip python-dev build-essential
 
 # Copy file to /app directory on container
+ADD ./FlaskApplication /app/
 ADD ./requirements.txt /app/requirements.txt
-ADD ~/Flask/HelloFlask/. /app
 
 # Install Flask 
 WORKDIR /app
