@@ -8,4 +8,5 @@ MAINTAINER <hoangphuocbk2.07@gmail.com>
 RUN apt-get update && apt-get install -y bridge-utils net-tools iptables ufw
 
 # Define default command
-CMD ["bash"]
+CMD ["tcpdump", "-i", "eth0"]
+
